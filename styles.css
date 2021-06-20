@@ -1,0 +1,493 @@
+:root {
+    --primary-color: #e50914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+    color: #999999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #ffffff;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+}
+
+.display {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url("background.jpg") no-repeat center center/cover;
+}
+
+.display::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.display-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.display-top img {
+    width: 140px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(40%, -50%);
+}
+
+.display-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-60%, -50%);
+}
+
+.display-content {
+    position: relative;
+    margin: 0 26%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 9rem;
+}
+
+.display-content h1 {
+    font-weight: 550;
+    font-size: 3.125rem;
+    margin: 0 30px;
+    max-width: 640px;
+    line-height: 1.1;
+}
+
+.display-content h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.625rem;
+    margin: 16px 0;
+    max-width: 640px;
+}
+
+.display-content p {
+    font-size: 19.2px;
+    font-weight: 300;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.display-content input {
+    position: absolute;
+    left: 0;
+    bottom: -8vh;
+    width: 450px;
+    height: 3rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #e50914;
+    background-image: linear-gradient(to bottom, #e50914, #db0510);
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+}
+
+.btn:hover {
+    opacity: 0.95;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+body {
+    font-family: Arial;
+    font-family: 'Muli', sans-serif;
+    color: #fff;
+}
+
+.nav-wrapper {
+    width: 300px;
+    /* margin: 100px auto; */
+    text-align: center;
+    position: absolute;
+    top: 53%;
+    left: 72rem;
+    transform: translate(-60%, -50%);
+}
+
+.sl-nav {
+    display: inline;
+}
+
+.sl-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+
+.sl-nav li {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.sl-nav li ul {
+    display: none;
+}
+
+.sl-nav li:hover ul {
+    position: absolute;
+    top: 29px;
+    right: -15px;
+    display: block;
+    background: #fff;
+    width: 120px;
+    padding-top: 0px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav li:hover .triangle {
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    z-index: 10;
+    height: 14px;
+    overflow: hidden;
+    width: 30px;
+    background: transparent;
+}
+
+.sl-nav li:hover .triangle:after {
+    content: '';
+    display: block;
+    z-index: 20;
+    width: 15px;
+    transform: rotate(45deg) translateY(0px) translatex(10px);
+    height: 15px;
+    background: #fff;
+    border-radius: 2px 0px 0px 0px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sl-nav li ul li {
+    position: relative;
+    text-align: left;
+    background: transparent;
+    padding: 15px 15px;
+    padding-bottom: 0;
+    z-index: 2;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+.sl-nav li ul li:last-of-type {
+    padding-bottom: 15px;
+}
+
+.sl-nav li ul li span {
+    padding-left: 5px;
+}
+
+.sl-nav li ul li span:hover,
+.sl-nav li ul li span.active {
+    color: #146c78;
+}
+
+.sl-flag {
+    display: inline-block;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    width: 15px;
+    height: 15px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    overflow: hidden;
+}
+
+.display-content .btn-lg {
+    position: absolute;
+    right: 0;
+    bottom: -8vh;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    height: 36px;
+    width: 10rem;
+}
+
+#mail {
+    height: 48px;
+    padding: 10px 10px 0;
+    width: 95%;
+}
+
+.part-0,
+.part-1,
+.part-2,
+.part-3 {
+    border-top: 8px rgb(69, 69, 69) solid;
+    padding: 50px;
+}
+
+.part-0 {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.card-0 {
+    padding-left: 100px;
+}
+
+.part-1 {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.card-1 {
+    padding-left: 80px;
+}
+
+.diff-parts h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.diff-parts h3 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.part-1 video {
+    position: relative;
+    width: 100%;
+    height: 54%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+.part-1 img {
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.part-2 {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.card-2 {
+    padding-left: 100px;
+}
+
+.part-3 {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+.card-3 {
+    padding-left: 80px;
+    padding-right: 20px;
+}
+
+.part-3 img {
+    width: 110%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+
+.part-3 video {
+    position: relative;
+    top: -87px;
+    left: 125px;
+    width: 65%;
+    height: 78%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+.faq {
+    text-align: center;
+    border-top: 8px rgb(69, 69, 69) solid;
+    padding: 50px;
+}
+
+.faq h1 {
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    align-items: center;
+}
+
+.questions li {
+    padding: 24px 30px;
+    margin: 4px;
+    font-size: 1.6rem;
+    background-color: #303030;
+    color: white;
+    text-align: left;
+    width: 60%;
+}
+
+.span1 {
+    margin-right: 33.5rem;
+}
+
+.span2 {
+    margin-right: 24rem;
+}
+
+.span3 {
+    margin-right: 30rem;
+}
+
+.span4 {
+    margin-right: 31.75rem;
+}
+
+.span5 {
+    margin-right: 23.75rem;
+}
+
+.span6 {
+    margin-right: 27.35rem;
+}
+
+.faq p {
+    padding-top: 60px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.input {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+}
+
+.input input {
+    width: 600px;
+    height: 3rem;
+}
+
+.input button {
+    height: 3.25rem;
+    width: 320px;
+    left: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+.footer {
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+.footer,
+.footer a {
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+    font-weight: lighter;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li {
+    line-height: 2.4;
+}
